@@ -1,0 +1,23 @@
+{
+  "name": "jstoolz",
+  "version": "1.0.0",
+  "description": "javascript misc generic tools ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pascualmg/jstoolz.git"
+  },
+  "keywords": [
+    "tools",
+    "misc"
+  ],
+  "author": "Pascual Muñoz Galián",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pascualmg/jstoolz/issues"
+  },
+  "homepage": "https://github.com/pascualmg/jstoolz#readme"
+}
