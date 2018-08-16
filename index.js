@@ -1,7 +1,6 @@
 export default {
   generateRandomId: function generateRamdomId (seedStr) {
     const len = seedStr.length
-    console.log('possibleStr', seedStr, ' len ', len)
     if (len <= 1) {
       return seedStr
     }
