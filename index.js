@@ -15,5 +15,18 @@ export default {
   inherits: function inherits (target, source) {
     for (var k in source.prototype)
       target.prototype[k] = source.prototype[k]
+  },
+  /**
+   * Carga un script externo en caliente.
+   * Se carga en el HEAD
+   * @param uri del script a cargar
+   * @param onLoad callback para ejecutar una vez esté cargado el script.
+   */
+  loadScript: function loadScript (uri, onLoad) {
+    var aScript = document.createElement('script')
+    aScript.type = 'text/javascript'
+    aScript.src = uri
+    document.head.appendChild(aScript)
+    aScript.onload = onLoad
   }
 }
