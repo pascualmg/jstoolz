@@ -17,6 +17,7 @@ export default {
       target.prototype[k] = source.prototype[k]
   },
   /**
+   * inspired by https://stackoverflow.com/questions/35854795/load-external-javascript-through-script-tag
    * Carga un script externo en caliente.
    * Se carga en el HEAD
    * @param uri del script a cargar
