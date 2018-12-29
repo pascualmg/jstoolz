@@ -1,5 +1,4 @@
-export default {
-  idGenerator: function idGenerator () {
+function idGenerator () {
     var createIdGenerator = function * () {
       var id = 1
       while (true) {
@@ -7,7 +6,10 @@ export default {
       }
     }
     return createIdGenerator()
-  },
+  }
+
+export default {
+  idGenerator: idGenerator(),
   generateRandomId: function generateRamdomId (seedStr) {
     const len = seedStr.length
     if (len <= 1) {
