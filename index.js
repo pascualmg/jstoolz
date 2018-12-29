@@ -20,8 +20,11 @@ export default {
           prefix = prefix
         }
 
+        var buff = ""
         while (true && id < maxSaveInteger) {
-          yield prefix.concat(id++)
+          buff =  prefix.concat(id)
+          yield buff
+          id++
         }
       }
       return createIdGenerator()
