@@ -1,15 +1,31 @@
-function idGenerator () {
-    var createIdGenerator = function * () {
-      var id = 1
-      while (true) {
-        yield id++
-      }
-    }
-    return createIdGenerator()
-  }
-
 export default {
-  idGenerator: idGenerator(),
+  idGenerator:
+    /**
+     * creates a generator of ids from n=bound to Max Save integer.
+     * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+     * if no params from n=1 to MAX_SAVE_INTEGER
+     *
+     * @param prefix text concatenated before the id. default nothing.
+     * @param bound int to begin , default 1.
+     *
+     * @returns {IterableIterator<*>}
+     */
+    function idGenerator (prefix, bound) {
+      var maxSaveInteger = Number.MAX_SAFE_INTEGER
+      var createIdGenerator = function * () {
+        var id = 1
+
+        var prefix = ''
+        if (typeof prefix !== 'undefined') {
+          prefix = prefix
+        }
+
+        while (true && id < maxSaveInteger) {
+          yield prefix.concat(id++)
+        }
+      }
+      return createIdGenerator()
+    },
   generateRandomId: function generateRamdomId (seedStr) {
     const len = seedStr.length
     if (len <= 1) {
@@ -40,5 +56,5 @@ export default {
     aScript.src = uri
     document.head.appendChild(aScript)
     aScript.onload = onLoad
-  }
+  },
 }
