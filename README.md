@@ -1,6 +1,6 @@
 # jstoolz
 
-https://rawgit.com/pascualmg/jstoolz/master/index.js
+https://cdn.jsdelivr.net/gh/pascualmg/jstoolz/index.js
 
 ```bash
 npm install jstoolz 
